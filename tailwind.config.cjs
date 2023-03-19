@@ -7,7 +7,7 @@ module.exports = {
   media: false, // or 'media' or 'class'
   theme: {
     fontSize: {
-      xm: ['.75rem', '1rem'], //font size, line height
+      xm: ['.75rem', '1rem'], // font size, line height
       sm: ['.875rem', '1.25rem'],
       base: ['1rem', '1.5rem'],
       lg: ['1.125rem', '1.65rem'],

@@ -1,10 +1,7 @@
-import React from 'react'
+import React, { type ReactElement } from "react";
 
-function Fallback(){
-
-  return (
-		<h1>Loading...</h1>
-  )
+function Fallback(): ReactElement {
+  return <h1>Loading...</h1>;
 }
 
-export default Fallback
+export default Fallback;

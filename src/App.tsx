@@ -1,9 +1,8 @@
-import React, { lazy, type ReactElement, Suspense, useState } from "react";
+import React, { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import Layout from "./components/layout/Layout";
 import Loading from "./components/common/Loading";
-
 
 const Home = lazy(async () => {
   const [moduleExports] = await Promise.all([
@@ -16,21 +15,20 @@ const Home = lazy(async () => {
 const NotFound: React.FC = () => <h1>404 - Not Found</h1>;
 
 const App = (): React.ReactElement => {
-
   return (
-      <Suspense
-        fallback={
-          <Loading fullScreen={true} backgroundColor="rgb(249 250 251)" />
-        }
-      >
-        <Layout>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Layout>
-      </Suspense>
+    <Suspense
+      fallback={
+        <Loading fullScreen={true} backgroundColor="rgb(249 250 251)" />
+      }
+    >
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Layout>
+    </Suspense>
   );
 };
 
