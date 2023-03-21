@@ -1,4 +1,4 @@
-import React, { type ReactElement } from 'react';
+import React, { type ReactElement } from "react";
 
 interface LineProps {
   segments: { length: number; angle: number }[];
@@ -6,7 +6,7 @@ interface LineProps {
   strokeWidth: number;
 }
 
-const Line = ({ segments, stroke, strokeWidth }: LineProps):ReactElement => {
+const Line = ({ segments, stroke, strokeWidth }: LineProps): ReactElement => {
   const pathData = segments.reduce<number[]>(
     (acc, { length, angle }, index) => {
       const x = index === 0 ? 0 : acc[acc.length - 2];
@@ -19,13 +19,13 @@ const Line = ({ segments, stroke, strokeWidth }: LineProps):ReactElement => {
   );
 
   const viewBoxSize = Math.max(...pathData.map(Math.abs)) + strokeWidth;
-  const viewBox = `0 -${viewBoxSize / 2} ${viewBoxSize * 2} ${viewBoxSize * 2}`
-  
+  const viewBox = `0 -${viewBoxSize / 2} ${viewBoxSize * 2} ${viewBoxSize * 2}`;
+
   return (
-    <div style={{ display: 'flex', justifyContent: 'center' }}>
+    <div style={{ display: "flex", justifyContent: "center" }}>
       <svg viewBox={viewBox} xmlns="http://www.w3.org/2000/svg">
         <path
-          d={`M 0,0 L ${pathData.join(' ')}`}
+          d={`M 0,0 L ${pathData.join(" ")}`}
           stroke={stroke}
           strokeWidth={strokeWidth}
           fill="none"

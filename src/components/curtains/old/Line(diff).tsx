@@ -11,14 +11,14 @@
 // type PathDataType = number | number[];
 
 // const Line = ({ segments, stroke, strokeWidth, angleTexts  }: LineProps): ReactElement => {
-  
+
 //   const pathData = segments.reduce<PathDataType[]>(
 //     (acc, { length, angle }, index) => {
 //       const x = index === 0 ? 0 : acc[acc.length - 2];
 //       const y = index === 0 ? 0 : acc[acc.length - 1];
 //       const newX = Number(x) + length * Math.cos((angle * Math.PI) / 180);
 //       const newY = Number(y) + length * Math.sin((angle * Math.PI) / 180);
-      
+
 //       const angleDiff = index === 0 ? 0 : angle - segments[index - 1].angle;
 //       const angleText = angleTexts[index] ?? 0;
 //       // const angleText = `${angleDiff}°`;
@@ -38,10 +38,10 @@
 //     const endY = pathData[index * 2 + 1];
 //     const midX = (startX + endX) / 2;
 //     const midY = (startY + endY) / 2;
-    
+
 //     const textX = angle > 0 ? midX + 650 : angle < 0 ? midX - 650 : midX;
 //     const textY = angle > 0 ? midY + -250 : angle < 0 ? midY - 250 : midY;
-  
+
 //     return (
 //       <text
 //         key={index}

@@ -13,7 +13,7 @@
 
 //   return (
 //     <>
-//       {/* <circle 
+//       {/* <circle
 //         cx={x}
 //         cy={y}
 //         r={1000}
@@ -22,9 +22,9 @@
 //         strokeWidth={50}
 //         strokeDasharray="100 160"
 //         style={{ margin: "auto", shapeRendering: "auto" }}
-        
+
 //       >
-        
+
 //       </circle>
 //       <text x={textX} y={textY} fontSize={500} textAnchor="middle">
 //         {angle}
