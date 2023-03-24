@@ -2,7 +2,7 @@ import React, { type ReactElement } from "react";
 
 export default function Footer(): ReactElement {
   return (
-    <footer className="w-full h-64 text-theme-secondary pt-5 border-t border-theme-tertiary bg-orange-500 text-white">
+    <footer className="w-full h-64 text-theme-secondary pt-5 bg-orange-500 text-white">
       <div className="mt-16 w-full flex items-center justify-center ">
         <a
           href="https://github.com/JamesPrenticez"
